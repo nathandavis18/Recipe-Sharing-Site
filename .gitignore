@@ -1,4 +1,0 @@
-apiController/*.sqlite3
-apiController/myapi/__pycache__
-apiController/myapi/migrations
-apiController/apiController/__pycache__
