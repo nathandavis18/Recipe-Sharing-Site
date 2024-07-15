@@ -31,7 +31,7 @@ function NewRecipe(){
             }
         ).then(results => results.text()).then(results => console.log(results));
     
-        return navigate('/Recipes');
+        return navigate('/');
     }
 
     return(

@@ -13,7 +13,6 @@ function App() {
         <Navigation />
         <Routes>
           <Route exact path="/" element={<RecipePage />} />
-          <Route exact path="/Recipes" element={<RecipePage />} />
           <Route path="/RecipeDetails" element={<RecipeDetails />} />
           <Route exact path="/Recipes/New" element={<NewRecipe />} />
         </Routes>
