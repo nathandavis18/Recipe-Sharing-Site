@@ -13,3 +13,4 @@ class Recipe(models.Model):
     image = models.ImageField(upload_to = recipeFileName, default='default.jpg')
     ingredients = models.TextField(max_length=500)
     steps = models.TextField(max_length=5000)
+    temp = models.TextField()
