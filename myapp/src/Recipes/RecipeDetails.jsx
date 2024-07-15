@@ -34,7 +34,7 @@ function RecipeDetails(){
                 <div className="col-md-3" />
                 <div className="col-md-6 text-center">
                     <br/>
-                    <Button as={Link} to="/Recipes" variant="secondary" className="recipeBtn">Back to List</Button>
+                    <Button as={Link} to="/" variant="secondary" className="recipeBtn">Back to List</Button>
                     <br />
                     <br />
                 </div>
