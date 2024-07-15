@@ -1,5 +1,51 @@
-.listImg{
+.cards{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.singleCard{
+    margin-bottom: 20px;
+}
+
+.newRecipeBtnDiv{
+    margin-left: 75px;
+}
+
+.recipeBtn{
+    background-color: #2b3035;
+    color: rgb(224, 224, 224);
+}
+
+.detailsBtn{
+    background-color: rgb(224, 224, 224);
+    color: #2b3035;
+}
+
+.cardImg{
+    height: 200px;
     width: 300px;
-    height: 300px;
     object-fit: cover;
+}
+
+.cardBody{
+    background-color: #2b3035;
+    color: rgb(224, 224, 224);
+}
+
+.details{
+    border: 1px solid red;
+}
+
+pre{
+    white-space: pre-wrap;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+.detailsImg{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: 1px solid white;
+    box-shadow: 3px 3px 3px white;
 }
