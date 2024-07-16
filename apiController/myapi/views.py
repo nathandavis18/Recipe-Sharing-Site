@@ -6,13 +6,13 @@ from .serializers import RecipeSerializer
 @api_view(['GET'])
 def recipeList(request):
     objects = Recipe.objects.all()
-    serialize = RecipeSerializer(objects, many=True, context={'request': request})
+    serialize = RecipeSerializer(objects, many=True)
     return Response(serialize.data)
 
 @api_view(['GET'])
 def recipeDetails(request, id):
     recipeObj = Recipe.objects.get(pk=id)
-    serialize = RecipeSerializer(recipeObj, context={'request': request})
+    serialize = RecipeSerializer(recipeObj)
     return Response(serialize.data)
 
 @api_view(['POST'])

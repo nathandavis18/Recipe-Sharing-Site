@@ -12,15 +12,14 @@ function RecipeDetails(){
     useEffect(() =>{
         fetch(fetchUrl).then(result => result.json()).catch(error => console.log(error))
         .then(result => setContent(result)).catch(error => console.log(error));
-    }, [])
-    console.log(content);
+    }, []);
     return(
         <>
             <div className="row">
                 <div className="col-md-3" />
                 <div className="col-md-6 text-center details">
                     <pre>
-                        <img src={content.image} title={content.name + " Image"} className="detailsImg"/><br />
+                        <img src={'http://100.26.43.31:8000' + content.image} title={content.name + " Image"} className="detailsImg"/><br />
                         <h2>{content.name}</h2>{content.description}<br /><br />
 
                         <h4>Ingredients</h4>

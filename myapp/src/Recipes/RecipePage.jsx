@@ -22,7 +22,7 @@ function RecipePage(){
         return(
             <div className="text-center singleCard" key={obj.id}>
                 <Card key={obj.id} style={{width: '300px'}}>
-                    <Card.Img variant="top" src={obj.image} className="cardImg"/>
+                    <Card.Img variant="top" src={'http://100.26.43.31:8000' + obj.image} className="cardImg"/>
                     <Card.Body className="cardBody">
                         <Card.Title>{obj.name}</Card.Title>
                         <Card.Text>
