@@ -24,7 +24,7 @@ function NewRecipe(){
             formInfo.append('image', image, image.name)
         }
     
-        fetch("http://34.228.197.39:8000/api/recipe/new",
+        fetch("http://18.212.247.157:8000/api/recipe/new",
             {
                 method: 'POST',
                 body: formInfo,

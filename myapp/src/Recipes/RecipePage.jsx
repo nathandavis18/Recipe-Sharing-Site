@@ -10,7 +10,7 @@ function RecipePage(){
 
     useEffect(() => {
         async function getInfo(){
-            let response = await fetch('http://34.228.197.39:8000/api/recipe');
+            let response = await fetch('http://18.212.247.157:8000/api/recipe');
             const content = await response.json();
             return content;
         }

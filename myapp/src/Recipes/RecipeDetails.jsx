@@ -8,7 +8,7 @@ function RecipeDetails(){
     const [content, setContent] = useState([]);
     const location = useLocation();
     const id = location.state.id;
-    const fetchUrl = 'http://34.228.197.39:8000/api/recipe/details/' + id;
+    const fetchUrl = 'http://18.212.247.157:8000/api/recipe/details/' + id;
     useEffect(() =>{
         fetch(fetchUrl).then(result => result.json()).catch(error => console.log(error))
         .then(result => setContent(result)).catch(error => console.log(error));
