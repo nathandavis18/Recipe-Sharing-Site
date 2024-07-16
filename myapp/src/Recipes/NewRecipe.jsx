@@ -13,7 +13,7 @@ function NewRecipe(){
     const [image, setImage] = useState();
     const navigate = useNavigate();
 
-    function submitForm(event){
+    async function submitForm(event){
         event.preventDefault();
         let formInfo = new FormData();
         formInfo.append('name', name);
@@ -24,13 +24,14 @@ function NewRecipe(){
             formInfo.append('image', image, image.name)
         }
     
-        fetch("http://18.212.247.157:8000/api/recipe/new",
+        fetch("http://100.26.43.31:8000/api/recipe/new",
             {
                 method: 'POST',
                 body: formInfo,
             }
         ).then(results => results.text()).then(results => console.log(results));
     
+        await new Promise(r => setTimeout(r, 500));
         return navigate('/');
     }
 
