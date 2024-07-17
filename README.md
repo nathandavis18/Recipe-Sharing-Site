@@ -1,6 +1,6 @@
 # Mini Recipe Sharing Site
 
-## Live Site URL: (http://roulettechassignment.s3-website-us-east-1.amazonaws.com/)[http://roulettechassignment.s3-website-us-east-1.amazonaws.com/]
+## Live Site URL: [http://roulettechassignment.s3-website-us-east-1.amazonaws.com/](http://roulettechassignment.s3-website-us-east-1.amazonaws.com/)
 
 This is my submission for the Roulettech Take-Home assignment. This incorporates React.js for the frontend and Django for the backend, using Django Rest Framework, Pillow, and Django CORS headers.
 
