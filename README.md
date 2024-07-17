@@ -1,5 +1,7 @@
 # Mini Recipe Sharing Site
 
+## Live Site URL: (http://roulettechassignment.s3-website-us-east-1.amazonaws.com/)[http://roulettechassignment.s3-website-us-east-1.amazonaws.com/]
+
 This is my submission for the Roulettech Take-Home assignment. This incorporates React.js for the frontend and Django for the backend, using Django Rest Framework, Pillow, and Django CORS headers.
 
 The Django server lives on an EC2 inside of a private subnet within a custom VPC. The Frontend lives on an S3 with a CloudFront CDN attached to it to provide lower latency.
