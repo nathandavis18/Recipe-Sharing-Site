@@ -32,10 +32,6 @@
     color: rgb(224, 224, 224);
 }
 
-.details{
-    border: 1px solid red;
-}
-
 pre{
     white-space: pre-wrap;
     font-family: 'Times New Roman', Times, serif;
