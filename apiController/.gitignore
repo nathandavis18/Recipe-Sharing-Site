@@ -1,4 +1,4 @@
+/myApi/__pycache__
+/apiController/__pycache__
 *.sqlite3
-myapi/__pycache__
-myapi/migrations
-apiController/__pycache__
+/myApi/migrations

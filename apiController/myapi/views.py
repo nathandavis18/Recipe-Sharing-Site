@@ -23,11 +23,24 @@ def newRecipe(request):
         ingredients = request.data.get('ingredients')
         steps = request.data.get('steps')
         image = request.data.get('image')
-
-        recipe = Recipe(name=name, description=desc, ingredients=ingredients, steps=steps)
-        if(image != None):
+        prepTime = request.data.get('prep')
+        cookTime = request.data.get('cook')
+        servings = request.data.get('servings')
+        recipe = Recipe(name=name, description=desc, ingredients=ingredients, steps=steps, prepTime=prepTime, cookTime=cookTime, servings=servings)
+        if(image != None and image != 'undefined'):
             recipe.image = image
         recipe.save()
     except:
         return Response("Error")
     return Response("Success")
+
+@api_view(['DELETE'])
+def deleteRecipe(request, id):
+    try:
+        recipe = Recipe.objects.get(pk=id)
+        print(recipe)
+        Recipe.delete(recipe)
+    except:
+        return Response("Error")
+    return Response("Success")
+        

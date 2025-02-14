@@ -1,39 +1,43 @@
-# Mini Recipe Sharing Site
+# Recipe Sharing Site
 
-This site incorporates React.js for the frontend and Django for the backend, using Django Rest Framework, Pillow, and Django CORS headers.
+This is a basic recipe sharing site, built using React/Next.js for the frontend, and Django for the backend.
 
-The Django server lives on an EC2 inside of a private subnet within a custom VPC. The Frontend lives on an S3 with a CloudFront CDN attached to it to provide lower latency.
+Python 3.10 is required. The python script titled 'start.py' will set up everything for you.
 
-Because the backend lives on a private subnet, there is a secondary EC2 that lives on a public subnet that acts as a bastion host, routing all information to/from the Django server. This is accomplished using nginx (pronounced engine x).
+### Start.py
 
-## MyApp
-This is my code for the frontend React.js. There are 3 JSX pages, and the App JSX which dictates the routing for each page, and the Main JSX, which incorporates the app with the index.html file. This app incorporates React Bootstrap, as well as standard Bootstrap for styling.
+This script will check for and install all necessary dependencies, if they are not already installed.
+These dependencies include:
 
-## ApiController
-This is the code for the API controller. Inside there are 2 subdirectories: APIController - which contains the app settings, and MyAPI, which incorporates the Django Rest Framework and contains the API views, as well as the model serializer.
+    - Django
+    - django-cors-headers
+    - djangorestframework
+    - pillow
+    - Node.js
+    - npm
 
-## nginx.conf
-This is the configuration file for nginx, which is the middle-ground server between the frontend S3 and the backend EC2. This makes sure each route is valid, and that the proper information is returned/posted.
+Django is the backend framework and requires cors-headers and restframework for REST api calls from the react frontend. Pillow is used for storing images.
 
-## Usage
-If you would like to clone and make changes to this repository to use as a template, feel free to do so. All IP addresses will need to be changed to use on your local server. To deploy the frontend, navigate to the myapp folder and run
+Node.js and npm are required to start the React/Next.js app.
 
-    npm run build
-Then you can copy the files to your S3 (or wherever you are hosting the app)
+## Getting Started
 
-To use the backend, navigate to the ApiController folder where the manage.py file lives and run
+To get started, simply make sure you have Python 3.10 or later installed. You can check this by running the following command in your command prompt:
 
-    python3 manage.py makemigrations myapi
-    python3 manage.py migrate
-    python3 manage.py runserver [optional]: 0.0.0.0:[PORT]
+    python --version
 
-In my case, I am running
+If you don't have python installed, be sure to check out the [Python Downloads Page](https://www.python.org/downloads/).
 
-    python3 manage.py runserver 0.0.0.0:8080
+Once python is installed, download and extract this repository. Then, navigate to the 'start.py' file, and run
 
-Whichever port you use will need to be open for inbound requests.
+    python start.py
 
-If you run into dependency issues, you may need to run
+Then you can open your browser to [http://localhost:3000](http://localhost:3000) to get started!
 
-    pip install pillow djangorestframework django-cors-headers django
+## apiController
 
+This is the Django/Python backend. All data is stored in an sqlite database, and uses Django to add/retrieve data from the database. Calls are made to the Django backend from the React frontend using the JavaScript Fetch API.
+
+## recipe-sharing-site
+
+This is the React/Next.js frontend. This controls how the information is presented to you, the user! There are a few pages. The main page presents the list of all recipes in your database! The RecipeDetails page shows more information about a specific recipe. The NewRecipe page allows you to create a new recipe!
