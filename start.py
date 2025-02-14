@@ -20,7 +20,7 @@ def run():
             stdout, stderr = process.communicate()
 
             system("fnm install 22")
-            system("node -v")
+            system("set PATH=%PATH%;%APPDATA%\\fnm\\node-versions\\v22.14.0\\installation")
             if(process.returncode != 0):
                 exit("Error installing node --- Exiting")
 
