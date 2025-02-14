@@ -1,5 +1,5 @@
 from os import system
-from subprocess import Popen
+from subprocess import Popen, PIPE
 from sys import version_info, exit
 from platform import system as pSystem
 
@@ -15,7 +15,8 @@ def run():
     if(nodeV != 0 or npmV != 0): #If the node version or npm version isn't available, install them.
         if(pSystem() == 'Windows'): #If on windows, use winget
             system("winget install Schniz.fnm")
-            process = Popen(["powershell", "-Command"], "fnm --use-on-cd | Out-String | Invoke-Expression && fnm install 22 && Set-ExecutionPolicy -Scope Process Unrestricted")
+            process = Popen(["powershell", "-Command", "fnm --use-on-cd | Out-String | Invoke-Expression && fnm install 22 && Set-ExecutionPolicy -Scope Process Unrestricted"],
+                            stdout=PIPE, stderr=PIPE, text=True)
             stdout, stderr = process.communicate()
 
             if(process.returncode != 0):
