@@ -13,8 +13,6 @@ These dependencies include:
     - django-cors-headers
     - djangorestframework
     - pillow
-    - Node.js
-    - npm
     - All required node modules
 
 Django is the backend framework and requires cors-headers and restframework for REST api calls from the react frontend. Pillow is used for storing images.
@@ -30,6 +28,8 @@ To get started, simply make sure you have Python 3.10 or later installed, as wel
     npm -v
 
 If you don't have python or node installed, be sure to check out the [Python Downloads Page](https://www.python.org/downloads/) and the [Node.js Downloads Page](https://nodejs.org/en/download).
+
+> **_NOTE:_** It is recommended you use the node.js installer, rather than the winget command if on Windows. If you choose to use the winget command, make sure you add the node installation to your PATH. The node installation with this method is usually located under %APPDATA%/fnm/node-versions/v22.14.0/installation
 
 Once python and node is installed, download and extract this repository. Then, navigate to the 'start.py' file, and run
 
