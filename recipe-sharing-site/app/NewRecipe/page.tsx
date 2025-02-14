@@ -1,5 +1,4 @@
 import Form from 'next/form'
-import FormData from 'react'
 import { submitForm } from './submitForm'
 import Link from 'next/link'
 
