@@ -2,3 +2,4 @@
 /apiController/__pycache__
 *.sqlite3
 /myApi/migrations
+/myApi/images/uploads
