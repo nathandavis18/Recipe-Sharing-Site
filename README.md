@@ -23,13 +23,15 @@ Node.js and npm are required to start the React/Next.js app.
 
 ## Getting Started
 
-To get started, simply make sure you have Python 3.10 or later installed. You can check this by running the following command in your command prompt:
+To get started, simply make sure you have Python 3.10 or later installed, as well as Node.js. You can check this by running the following command in your commands prompt:
 
     python --version
+    node -v
+    npm -v
 
-If you don't have python installed, be sure to check out the [Python Downloads Page](https://www.python.org/downloads/).
+If you don't have python or node installed, be sure to check out the [Python Downloads Page](https://www.python.org/downloads/) and the [Node.js Downloads Page](https://nodejs.org/en/download).
 
-Once python is installed, download and extract this repository. Then, navigate to the 'start.py' file, and run
+Once python and node is installed, download and extract this repository. Then, navigate to the 'start.py' file, and run
 
     python start.py
 

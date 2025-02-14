@@ -9,25 +9,6 @@ def run():
     if(version_info < MIN_PYTHON_VERSION):
         exit("Python %s.%s or later is required.\n" % MIN_PYTHON_VERSION)
 
-    nodeV = system("node -v")
-    npmV = system("npm -v")
-
-    if(nodeV != 0 or npmV != 0): #If the node version or npm version isn't available, install them.
-        if(pSystem() == 'Windows'): #If on windows, use winget
-            system("winget install Schniz.fnm")
-            process = Popen(["powershell", "-Command", "Set-ExecutionPolicy -Scope Process Unrestricted"],
-                            stdout=PIPE, stderr=PIPE, text=True)
-            stdout, stderr = process.communicate()
-
-            system("fnm install 22")
-            system("set PATH=%PATH%;%APPDATA%\\fnm\\node-versions\\v22.14.0\\installation")
-            if(process.returncode != 0):
-                exit("Error installing node --- Exiting")
-
-        else: #Linux and MacOS both use curl to get fnm to install node
-            system("curl -o- https://fnm.vercel.app/install | bash")
-            system("fnm install 22")
-
     system("python -m pip install -r requirements.txt")
 
     system("cd ./apiController && python manage.py makemigrations && python manage.py migrate")
