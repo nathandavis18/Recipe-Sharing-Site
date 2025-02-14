@@ -15,6 +15,7 @@ These dependencies include:
     - pillow
     - Node.js
     - npm
+    - All required node modules
 
 Django is the backend framework and requires cors-headers and restframework for REST api calls from the react frontend. Pillow is used for storing images.
 
@@ -41,3 +42,7 @@ This is the Django/Python backend. All data is stored in an sqlite database, and
 ## recipe-sharing-site
 
 This is the React/Next.js frontend. This controls how the information is presented to you, the user! There are a few pages. The main page presents the list of all recipes in your database! The RecipeDetails page shows more information about a specific recipe. The NewRecipe page allows you to create a new recipe!
+
+## Features
+
+This app has simple CRUD features. You can create a new recipe with the Add Recipe button, or delete an existing recipe if you don't want it anymore. You can view all the recipes saved on the home page, as well as view specific details, such as ingredients, directions, and cook time information on the details page.
