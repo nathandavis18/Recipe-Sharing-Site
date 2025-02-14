@@ -15,7 +15,9 @@ def run():
     if(nodeV != 0 or npmV != 0): #If the node version or npm version isn't available, install them.
         if(pSystem() == 'Windows'): #If on windows, use winget
             system("winget install Schniz.fnm")
+            system("powershell && fnm --use-on-cd | Out-String | Invoke-Expression")
             system("fnm install 22")
+            system("Set-ExecutionPolicy -Scope Process Unrestricted")
         else: #Linux and MacOS both use curl to get fnm to install node
             system("curl -o- https://fnm.vercel.app/install | bash")
             system("fnm install 22")
