@@ -15,10 +15,12 @@ def run():
     if(nodeV != 0 or npmV != 0): #If the node version or npm version isn't available, install them.
         if(pSystem() == 'Windows'): #If on windows, use winget
             system("winget install Schniz.fnm")
-            process = Popen(["powershell", "-Command", "fnm --use-on-cd | Out-String | Invoke-Expression && fnm install 22 && Set-ExecutionPolicy -Scope Process Unrestricted"],
+            process = Popen(["powershell", "-Command", "Set-ExecutionPolicy -Scope Process Unrestricted"],
                             stdout=PIPE, stderr=PIPE, text=True)
             stdout, stderr = process.communicate()
 
+            system("fnm install 22")
+            system("node -v")
             if(process.returncode != 0):
                 exit("Error installing node --- Exiting")
 
