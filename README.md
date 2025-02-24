@@ -4,6 +4,17 @@ This is a basic recipe sharing site, built using React/Next.js for the frontend,
 
 Python 3.10 is required. The python script titled 'start.py' will set up everything for you.
 
+## Screenshots
+
+#### Home Page to see all recipes
+![Screenshot 2025-02-23 213731](https://github.com/user-attachments/assets/fd837fe8-344e-4249-820f-8f49a0a4c23f)
+
+#### Recipe Details page
+![Screenshot 2025-02-23 213740](https://github.com/user-attachments/assets/e5d61ed9-228b-4481-b7b5-0a8f90e79aa1)
+
+#### Creating a new recipe page
+![Screenshot 2025-02-23 213752](https://github.com/user-attachments/assets/8d1b85e3-be10-4939-a6cf-e558752f0921)
+
 ### Start.py
 
 This script will check for and install all necessary dependencies, if they are not already installed.
